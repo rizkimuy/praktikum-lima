@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form Validasi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/validasi.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>Formulir Keberangkatan</h2>
+		</div>
+		<form class="form" id="form">
+			<div class="form-control">
+				<label>Username</label>
+				<input type="text" placeholder="Nama Anda" id="Username" onKeyPress="return maxlength(event)" required="">
+			</div>
+				<div class="form-control">
+				<label>Email</label>
+				<input type="text" placeholder="fulan@gmail.com" id="Email" required="">
+			</div>
+				<div class="form-control">
+				<label>Jam Keberangkatan</label>
+				<input type="time" name="Jam" id="jam" required="">
+			</div>
+			<div class="form-control">
+				<label>Tujuan Keberangkatan</label><br>
+				<select name="tujuan" id="tujuan" required>
+						<option value="Mekkah"> Mekkah </option>
+						<option value="Madinah"> Madinah </option>
+						<option value="Jeddah"> Jeddah  </option>
+						<option value="Istanbul"> Istanbul  </option>
+						<option value="Kairo"> Kairo  </option>
+						<option value="Lebanon"> Lebanon  </option>
+						<option value="London"> London</option>
+						<option value="Paris"> Paris  </option>
+						<option value="Bali"> Bali  </option>
+						<option value="Lombok"> Lombok </option>
+				</select>
+			</div>
+				<div class="form-control">
+				<label>Jumlah Tiket</label>
+				<input  type="text" id="jmltiket" name="jmltiket" placeholder="Jumlah Tiket " onKeyUp="number (this)" maxlength="2" required >
+			</div>
+			<div class="form-control">
+			<input type="submit" onClick="return validasi()" value="submit">
+		</div>
+		</form>
+
+	</div>
+</body>
+</html>

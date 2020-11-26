@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+</head>
+<body>
+	<h2> -------- CHAT HALU MADE IN KAUM JOMBLO --------  </h2>
+	<table style="border: 1px solid black; height: 500x; width: 500px; background-color:rgb(255, 255, 255);" >
+        <tr style="height: 400px;"> 
+            <td style="vertical-align: top; text-align: left;"><div class="isipesan"></div></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="pesan" class="pesan" size="70"></td>
+            <td><button name="Send" class="kirim">Send</button></td>
+        </tr>
+    </table>
+    
+
+
+    <script>
+        let isipesan = document.querySelector(".isipesan");
+        let pesan = document.querySelector(".pesan");
+        let kirim = document.querySelector(".kirim ");
+
+        kirim.addEventListener("click", function() {
+            isipesan.innerHTML = isipesan.innerHTML + pesan.value + "<br>";
+        })
+        
+	</script>
+</body>	
+</html>

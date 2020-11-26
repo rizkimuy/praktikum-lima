@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kurs Mata Uang Asing</title>
+	<style>
+		span{
+			color:rgb(0, 0, 0);
+		}
+		#selsel{
+			background-color: rgba(355, 355, 355, 0.8);
+			width: 550px;
+			margin:10px auto;
+			padding: 15px;
+			position: absolute;
+			transform: translate(65%, 65%);
+		}
+		table{
+			border: solid 1px #000;
+			width: 100%;
+		}
+		table tr td,table tr th{
+			border: solid 1px #000;
+		}
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="selsel">
+	<h1>Kurs <span>Mata Uang Asing</span></h1>
+	<table cellpadding="5" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Masukkan nilai</th>
+				<th>Valas</th>
+				<th>Nilai Rupiah</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr>
+					<td><input onkeyup="kurs()" placeholder="Masukan Nilai" type="text" name="nilai" id="nilai"></td>
+				<td>
+				<select onchange="kurs()" id="kurs" >
+					<option value="1">Dollar US</option>
+					<option value="2">Dollar Singapore</option>
+					<option value="3">Ringgit Malaysia</option>
+					<option value="4">Yen Jepang</option>
+					<option value="5">Euro</option>
+					<option value="6">Riyal Arab Saudi</option>
+				</select></td>
+				<td><input type="text" disabled="" id="rupiah" placeholder="Nilai Rupiah" name="rupiah"></td>
+				</tr>
+			</tbody>
+	</table>
+</div>
+		<script>
+			function kurs() {
+
+		let gisel = document.getElementById("kurs").value;
+
+		if (gisel == 1) {
+			input = document.getElementById("nilai").value;
+			nilai = 9915;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp.' + hitung;
+		}else if (gisel == 2) {
+			input = document.getElementById("nilai").value;
+			nilai = 13472;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp' + hitung;
+		}else if (gisel == 3) {
+			input = document.getElementById("nilai").value;
+			nilai = 874;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp.' + hitung;
+		}else if (gisel == 4) {
+			input = document.getElementById("nilai").value;
+			nilai = 120;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp.'+ hitung;
+		}else if (gisel == 5) {
+			input = document.getElementById("nilai").value;
+			nilai = 15888;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp' + hitung;
+		}else if (gisel == 6) {
+			input = document.getElementById("nilai").value;
+			nilai = 3592;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp.' + hitung;
+		}
+	}
+
+		</script>
+</body>
+</html>
+

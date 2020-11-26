@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Image Picker</title>
+	<style>
+       .img{
+	  text-align: center;
+	  background-color: rgb(169, 169, 169,0.7);
+	  width: 600px;
+	  margin:50px auto;
+	  padding: 15px;
+	  text-align: center;
+    }
+	</style>
+	<script>
+		function pilih(){
+			let list_style = document.getElementById('style');
+			let idx = list_style.selectedIndex;
+			let area_gambar = document.getElementById ("gambar");
+			area_gambar.src = "images/" + list_style[idx].value + ".jpg";
+			alert("your choise is " + list_style[idx].value + ".jpg");
+		}
+	</script>
+</head>
+<body>
+	<div class="img">
+		<h1><b>Choose Your JDM Cars</b></h1>
+		<hr>
+		<form id="frm1">
+			I choose <select id="style"  onchange="pilih()">
+				<option value="ACURA"> Honda Acura NSX</option>
+				<option value="SUPRA"> Toyota Supra </option>
+				<option value="2000GT"> Toyota 2000 GT </option>
+				<option value="GTR"> Nissan GTR R34</option>
+				<option value="LANCER"> Mitsubishi Lancer </option>
+				<option value="RX7"> Mazda RX-7 </option>
+				<option value="240Z"> Datsun 240Z </option>
+			</select>
+		</form>
+		<br></br>
+		<img src="images/ACURA.jpg" alt="gambar fashion" id="gambar">
+	</div>
+</body>
+</html>
